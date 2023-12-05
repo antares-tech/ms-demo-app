@@ -1,0 +1,56 @@
+.producers, .consumers {
+	padding: 32px;
+}
+
+.video-container {
+	width: auto;
+	height: 100%;
+	position: relative;
+	margin-left: 8px;
+	margin-right: 8px;
+	position: relative;
+
+	& .info-panel {
+		position: absolute;
+		width: calc(100% - 16px);
+		background: fade-out(black, .8);
+		bottom: 0px;
+		line-height: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-content: flex-start;
+		flex-wrap: wrap;
+		padding: 0 8px;
+
+		& .ant-typography {
+			color: white;
+			vertical-align: top;
+			display: inline-block;
+			text-align: left;
+
+			&.display-name {
+				font-weight: bold;
+				font-size: 0.9rem;
+			}
+
+			&.user-agent {
+				font-size: 0.8rem;
+			}
+		}
+	}
+}
+
+.video-container video {
+	width: auto;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.video-group-container {
+	display: flex;
+	flex-flow: row;
+	height: 200px;
+	justify-content: center;
+}
+

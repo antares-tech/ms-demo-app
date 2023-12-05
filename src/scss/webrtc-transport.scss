@@ -1,0 +1,19 @@
+$background-color: #fafafa;
+$border-color: #ccc;
+
+table.webrtc-transport-tbl {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+
+	& th {
+		background-color: $background-color;
+		border: 1px solid $border-color;
+	}
+
+	& td {
+		border: 1px solid $border-color;
+		padding: 8px;
+		text-align: left;
+	}
+}
