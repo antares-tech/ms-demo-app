@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@antares-tech/ms-client": "^0.0.7",
+    "@antares-tech/ms-client": "^0.0.9",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -11,7 +11,6 @@
     "antd": "^5.11.5",
     "axios": "^1.6.2",
     "bowser": "^2.11.0",
-    "eventemitter2": "^6.4.9",
     "js-cookie": "^3.0.5",
     "random-string": "^0.2.0",
     "react": "^18.2.0",

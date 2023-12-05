@@ -1,7 +1,7 @@
 import React            from 'react';
 import { useSelector }  from 'react-redux';
 import Log              from 'common/log';
-import RTCStats         from 'ms/rtcstats';
+import { RTCStats }     from '@antares-tech/ms-client';
 import { Typography }   from 'antd';
 import { Space, Table } from 'antd';
 import { Row, Col }     from 'antd';

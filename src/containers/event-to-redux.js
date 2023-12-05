@@ -1,6 +1,6 @@
 import Log                               from 'common/log';
 import store                             from 'store';
-import Room                              from 'ms/room';
+import { Room }                          from '@antares-tech/ms-client';
 import { setRoomState }                  from 'slices/room';
 import { setRoomMediasoupClientHandler } from 'slices/room';
 import { setUserAgent }                  from 'slices/me';
