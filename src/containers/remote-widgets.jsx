@@ -23,11 +23,12 @@ export default function RemoteWidgets (props) {
 			<div className='video-group-container'>
 				{ videoConsumers.map (curr => {
 						const peer = peers[curr.peerVCID];
-
+						const audio = audioConsumers.find(audio => audio.appData?.streamId === curr.appData?.streamId);
 						return (
 							<VideoWidget
 								key           = {`video-${curr.id}`}
-								track         = {curr.track}
+								videoTrack    = {curr.track}
+								audioTrack    = {audio?.track}
 								displayName   = {peer?.displayName || '--'}
 								userAgent     = {peer?.userAgent}
 							/>
