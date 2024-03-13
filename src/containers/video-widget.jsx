@@ -10,19 +10,19 @@ import { Typography }  from 'antd';
 const log = new Log ('video-widget', 'debug');
 const { Text } = Typography;
 
-export default function VideoWidget ({ track, displayName, userAgent }) {
+export default function VideoWidget ({ videoTrack, displayName, userAgent, audioTrack = null }) {
 	const videoRef = useRef (null);
 	const [ _track, set_Track ] = useState (null);
 
 	useEffect (() => {
-		if (track) {
-			if (_track?.id !== track.id) {
+		if (videoTrack) {
+			if (_track?.id !== videoTrack.id) {
 				stopVideoTrack ();
-				set_Track (track);
+				set_Track (videoTrack);
 			}
 		}
 
-	}, [ track ]);
+	}, [ videoTrack ]);
 
 	useEffect(() => {
 		if (_track)
@@ -44,6 +44,9 @@ export default function VideoWidget ({ track, displayName, userAgent }) {
 		const stream       = new MediaStream ();
 
 		stream.addTrack (tr);
+		if(audioTrack) {
+			stream.addTrack (audioTrack);
+		}
 		videoElement.srcObject = stream;
 
 		videoElement.play ()

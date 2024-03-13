@@ -11,7 +11,6 @@ export default function LocalWidgets (props) {
 	const me             = useSelector ((state) => state.me);
 	const producers      = useSelector ((state) => state.producers.arr);
 	const videoProducers = producers.filter (curr => curr.track.kind === 'video');
-
 	return (
 		<div className='producers'>
 			<Text>
@@ -22,7 +21,7 @@ export default function LocalWidgets (props) {
 				videoProducers.map (curr =>
 						<VideoWidget
 							key           = {`video-${curr.id}`}
-							track         = {curr.track}
+							videoTrack    = {curr.track}
 							displayName   = {me.displayName}
 							userAgent     = {me.userAgent}
 						/>
